@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: neopix/mywebserver:1.0
+        image: evanndeb/mywebserver:1.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
