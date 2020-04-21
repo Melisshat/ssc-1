@@ -312,7 +312,8 @@ Resources:
         IpProtocol: tcp
         ToPort: 80
       SecurityGroupEgress:
-        IpProtocol: all
+        - ToPort: -1
+        CidrIp: 0.0.0.0/0
 
   ApplicationSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -328,7 +329,8 @@ Resources:
         IpProtocol: tcp
         ToPort: 22
       SecurityGroupEgress:
-        IpProtocol: all
+        - ToPort: -1
+        CidrIp: 0.0.0.0/0
 
   DatabaseSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -344,4 +346,5 @@ Resources:
         IpProtocol: tcp
         ToPort: 22
       SecurityGroupEgress:
-        IpProtocol: all
+        - ToPort: -1
+        CidrIp: 0.0.0.0/0
