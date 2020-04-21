@@ -312,7 +312,7 @@ Resources:
         IpProtocol: tcp
         ToPort: 80
       SecurityGroupEgress:
-        - ToPort: -1
+      - ToPort: -1
         CidrIp: 0.0.0.0/0
 
   ApplicationSecurityGroup:
@@ -329,7 +329,7 @@ Resources:
         IpProtocol: tcp
         ToPort: 22
       SecurityGroupEgress:
-        - ToPort: -1
+      - ToPort: -1
         CidrIp: 0.0.0.0/0
 
   DatabaseSecurityGroup:
