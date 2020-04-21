@@ -21,4 +21,6 @@ jobs:
         aws configure set aws_session_token ${{ secrets.AWS_SESSION_TOKEN }}
         aws cloudformation deploy --template-file cloudformation.yaml --stack-name evann-stack --no-fail-on-empty-changeset
         aws cloudformation deploy --template-file ecs-task.yaml --stack-name ecs-task --parameter-overrides ImageName=docker.io/evanndeb/ssc:sha-$(git rev-parse --short HEAD) --no-fail-on-empty-changeset
-
+    - uses: minchao/cfn-nag-action@master
+      with:
+        args: '--input-path cf-all.yaml'
