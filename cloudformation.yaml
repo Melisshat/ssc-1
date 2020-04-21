@@ -17,7 +17,7 @@ Mappings:
       "HVM64": "ami-00b882ac5193044e4"
     eu-west-1: 
       "HVM64": "ami-0f62aafc6efe8fd7b"
-#Conditions: 
+#Conditions  : 
 Resources: 
   EC2Instance: 
     Type: "AWS::EC2::Instance"
