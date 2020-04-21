@@ -307,7 +307,7 @@ Resources:
     Properties:
       GroupDescription: "Enable SSH and HTTP access"
       SecurityGroupIngress:
-      - CidrIp: 0.0.0.0/0
+      - CidrIp: 88.122.235.110/32
         FromPort: 80
         IpProtocol: tcp
         ToPort: 80
@@ -321,7 +321,7 @@ Resources:
         FromPort: 8080
         IpProtocol: tcp
         ToPort: 8080
-      - CidrIp: 0.0.0.0/0 #Attention!! Don't do this in real life!!
+      - CidrIp: 88.122.235.110/32 #Attention!! Don't do this in real life!!
         FromPort: 22
         IpProtocol: tcp
         ToPort: 22
@@ -335,7 +335,7 @@ Resources:
         FromPort: 3306
         IpProtocol: tcp
         ToPort: 3306
-      - CidrIp: 0.0.0.0/0 #Attention!! Don't do this in real life!!
+      - CidrIp: 88.122.235.110/32 #Attention!! Don't do this in real life!!
         FromPort: 22
         IpProtocol: tcp
         ToPort: 22
